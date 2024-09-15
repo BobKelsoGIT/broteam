@@ -40,4 +40,4 @@ def upload_video(request):
     else:
         form = VideoFileForm()
 
-    return render(request, 'upload.html', {'form': form})
+    return render(request, 'mediaextractor/upload.html', {'form': form})

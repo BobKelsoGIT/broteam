@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light ms-3">
+    <a class="navbar-brand" href="/">BroApps</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="btn btn-success me-2 ms-3" href="{% url 'upload_video' %}">Извлечь звук</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link " href="">Statuses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Labels</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Tasks</a>
+            </li>
+            {% endif %}
+        </ul>
+        {% if user.is_authenticated %}
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <span class="fs-6 fw-light badge bg-info me-3 mt-2">Welcome username</span></h4>
+            </li>
+            <li class="nav-item">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-danger me-3">Log out</button>
+                </form>
+            </li>
+        </ul>
+        {% else %}
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="" href=""></a>
+            </li>
+            <li class="nav-item">
+                <a class="" href=""></a>
+            </li>
+        </ul>
+        {% endif %}
+    </div>
+</nav>

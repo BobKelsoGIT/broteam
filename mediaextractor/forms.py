@@ -10,7 +10,6 @@ class VideoFileForm(forms.ModelForm):
         labels = {
             'video': ""
         }
-        label_suffix = ''
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
