@@ -125,4 +125,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
-CSRF_TRUSTED_ORIGINS = ['.twc1.net']
+CSRF_TRUSTED_ORIGINS = ['https://bobkelsogit-broteam-8045.twc1.net']
