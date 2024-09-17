@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
     path('upload/', include('mediaextractor.urls')),
+    path('transcribe/', include('transcriber.urls')),
 
 ]
 
